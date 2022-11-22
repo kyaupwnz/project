@@ -27,4 +27,5 @@ london_co = {
 
 
 x = input('Введите имя устройства:')
-print(london_co[x])
+y = input('Введите имя параметра:')
+print(london_co[x][y])
