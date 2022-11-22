@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 london_co = {
             "r1": {
                         "location": "21 New Globe Walk",
@@ -27,5 +28,13 @@ london_co = {
 
 
 x = input('Введите имя устройства:')
-y = input('Введите имя параметра:')
-print(london_co[x][y])
+z = []
+for key in london_co[x].keys():
+    z.append(key)
+z = tuple(z)
+y = input(f'Введите имя параметра:{z}')
+y = y.lower()
+if y not in z:
+  print('Такого параметра нет')
+else:
+  print(london_co[x][y])
